@@ -130,7 +130,7 @@ const Main = () => {
             <MenuIcon />
           </IconButton>
             <Typography variant="h5" className={classes.topic} noWrap>
-              Intranet
+            Intramail
             </Typography>
         </Toolbar>
       </AppBar>

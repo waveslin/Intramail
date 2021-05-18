@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ComponentPropsType } from '../../global/types';
 import clsx from "clsx";
 import { createStyles, makeStyles, useTheme, Theme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -94,13 +95,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-interface ComponetsProps {
-    Content?: React.ReactNode;
-}
-
-const Navigation: React.FC<ComponetsProps> = (props) => {
-
-    const { Content } = props;
+const Navigation = ( { children } : ComponentPropsType) => {
 
     const classes = useStyles();
     const theme = useTheme();
@@ -187,7 +182,7 @@ const Navigation: React.FC<ComponetsProps> = (props) => {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          {Content}
+          {children}
         </main>
       </div>);
   }

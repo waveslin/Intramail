@@ -6,15 +6,15 @@ import Home from './components/home/Home'
 const Main = () => {
   return (
     <>
-    <Router>
-      <Navigation Content={(
-            <Switch>
-              <Route exact path='/'>
-                <Home />
-              </Route>
-            </Switch>
-      )} />
-    </Router>
+      <Router>
+        <Navigation>
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+          </Switch>
+        </Navigation>
+      </Router>
     </>
   );
 }

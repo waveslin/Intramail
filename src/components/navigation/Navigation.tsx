@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import { ComponentPropsType } from '../../global/types';
 import clsx from "clsx";
 import { createStyles, makeStyles, useTheme, Theme } from "@material-ui/core/styles";
@@ -10,14 +11,14 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import AppsIcon from '@material-ui/icons/Apps';
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import sectionTop from './SectionTop';
+import sectionMid from './SectionMid';
 
 const drawerWidth = 200;
 
@@ -91,6 +92,9 @@ const useStyles = makeStyles((theme: Theme) =>
     topic: {
       color: 'rgba(0, 0, 0, 0.54)',
       marginLeft: theme.spacing(5),
+    },
+    link: {
+      color: 'inherit'
     }
   })
 );
@@ -128,7 +132,7 @@ const Navigation = ( { children } : ComponentPropsType) => {
                 [classes.hide]: open
               })}
             >
-              <MenuIcon />
+              <AppsIcon />
             </IconButton>
               <Typography variant="h5" className={classes.topic} noWrap>
               Intramail
@@ -159,23 +163,23 @@ const Navigation = ( { children } : ComponentPropsType) => {
           </div>
           <Divider />
           <List>
-            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-              <ListItem button key={text}>
+            {sectionTop.map((NavLink) => (
+              <ListItem button key={NavLink.name}>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  <Link to={NavLink.link} className={classes.link}>{NavLink.icon}</Link>
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={NavLink.name} />
               </ListItem>
             ))}
           </List>
           <Divider />
           <List>
-            {["All mail", "Trash", "Spam"].map((text, index) => (
-              <ListItem button key={text}>
+            {sectionMid.map((NavLink) => (
+              <ListItem button key={NavLink.name}>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  <Link to={NavLink.link} className={classes.link}>{NavLink.icon}</Link>
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={NavLink.name} />
               </ListItem>
             ))}
           </List>

@@ -1,5 +1,5 @@
-import { NavLinkType } from '../../global/types';
-import RoutesMapping from '../../routes/RoutesMapping';
+import { NavLinkType } from '../../global/intefaces';
+import RoutesMapping from '../../routes/routesMapping';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import EmailIcon from '@material-ui/icons/Email';
 import AssignmentIcon from '@material-ui/icons/Assignment';

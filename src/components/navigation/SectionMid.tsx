@@ -1,5 +1,5 @@
-import { NavLinkType } from '../../global/types';
-import RoutesMapping from '../../routes/RoutesMapping';
+import { NavLinkType } from '../../global/intefaces';
+import RoutesMapping from '../../routes/routesMapping';
 import BusinessIcon from '@material-ui/icons/Business';
 import InboxIcon from '@material-ui/icons/Inbox';
 import LaunchIcon from '@material-ui/icons/Launch';

@@ -1,7 +1,7 @@
-import { RoutesMapping } from '../global/types';
+import { RoutesMappingType } from '../global/intefaces';
 import Home from '../components/home/Home';
 
-const routes : RoutesMapping = {
+const routes : RoutesMappingType = {
     home: {
         path: "/",
         exact: true,

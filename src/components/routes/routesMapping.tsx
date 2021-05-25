@@ -1,56 +1,61 @@
-import { IRoutesMapping } from '../global/intefaces';
-import Home from '../components/home/Home';
+import { IRoutesMapping } from '../../global/intefaces';
+import Home  from '../home/Home';
+import Email from '../email/Email';
+import Admin from '../admin/Admin';
+import Tasks from '../tasks/Tasks';
+import Shared from '../shared/Shared';
+import Setting from '../setting/Setting'
 
 const routes : IRoutesMapping = {
-    home: {
+    Home : {
         path: "/",
         exact: true,
-        content: Home
+        content: <Home /> 
     },
     email: {
         path: "/email",
         exact: true,
-        content: Home
+        content: <Email />
     },
     admin: {
         path: "/admin",
         exact: true,
-        content: Home
+        content: <Admin />
     },
     search: {
         path: "/search",
         exact: true,
-        content: Home
+        content: <Home />
     },
-    mission: {
-        path: "/mission",
+    tasks: {
+        path: "/tasks",
         exact: true,
-        content: Home
+        content: <Tasks />
     },
     schedule: {
         path: "/schedule",
         exact: true,
-        content: Home
+        content: <Home />
     },
-    bucket: {
-        path: "/bucket",
+    shared: {
+        path: "/shared",
         exact: true,
-        content: Home
+        content: <Shared />
     },
     outlet: {
         path: "/outlet",
         exact: true,
-        content: Home
+        content: <Home />
     },
     setting: {
         path: "/setting",
         exact: true,
-        content: Home
+        content: <Setting />
     },
     business: {
         path: "/business",
         exact: true,
-        content: Home
+        content: <Home />
     }
 }
 

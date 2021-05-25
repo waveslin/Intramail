@@ -1,7 +1,7 @@
-export enum Event { Sys, Team, TeamSys, Teams, Public, GlobalSys, Global, Admin }
+export enum EventType { Sys, Team, TeamSys, Teams, Public, GlobalSys, Global, Admin }
 
-export type SystemEvent = Event.Sys | Event.TeamSys | Event.GlobalSys
+export type SystemEventType = EventType.Sys | EventType.TeamSys | EventType.GlobalSys
 
-export type TeamEvent = Event.Team | Event.TeamSys 
+export type TeamEventType = EventType.Team | EventType.TeamSys 
 
-export type PMEvent = Event.Team | Event.TeamSys | Event.Teams | Event.Public
+export type PMEventType = EventType.Team | EventType.TeamSys | EventType.Teams | EventType.Public

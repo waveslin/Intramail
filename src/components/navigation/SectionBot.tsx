@@ -1,6 +1,6 @@
-import { NavLinkType } from '../../global/intefaces';
+import { INavLink } from '../../global/intefaces';
 
-const SectionBot : NavLinkType[] = [
+const SectionBot : INavLink[] = [
     
 ]
 

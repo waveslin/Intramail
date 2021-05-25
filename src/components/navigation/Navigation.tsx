@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import { ComponentPropsType } from '../../global/intefaces';
+import { IComponentProps } from '../../global/intefaces';
 import clsx from "clsx";
 import { createStyles, makeStyles, useTheme, Theme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Navigation = ( { children } : ComponentPropsType) => {
+const Navigation = ( { children } : IComponentProps) => {
 
     const classes = useStyles();
     const theme = useTheme();

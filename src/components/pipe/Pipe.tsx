@@ -1,14 +1,14 @@
 import Typography from "@material-ui/core/Typography";
 
 
-const Email = () => {
+const Pipe = () => {
     return (
         <>
             <Typography paragraph>
-               This is E-mail
+               This is Pipe
             </Typography>
         </>
     );
 }
 
-export default Email;
+export default Pipe;

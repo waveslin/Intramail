@@ -6,7 +6,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const sectionTop : INavLink[] = [
     { name: 'Home', icon: <DashboardIcon />, link: RoutesMapping.home.path },
-    { name: 'Email', icon: <EmailIcon />, link: RoutesMapping.email.path },
+    { name: 'Mail', icon: <EmailIcon />, link: RoutesMapping.mail.path },
     { name: 'Tasks', icon: <AssignmentIcon />, link: RoutesMapping.mission.path},
 ]
 

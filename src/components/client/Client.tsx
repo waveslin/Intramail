@@ -1,14 +1,14 @@
 import Typography from "@material-ui/core/Typography";
 
 
-const Guard = () => {
+const Client = () => {
     return (
         <>
             <Typography paragraph>
-               This is E-mail
+               This is Auth
             </Typography>
         </>
     );
 }
 
-export default Guard;
+export default Client;

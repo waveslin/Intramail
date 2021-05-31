@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import { IComponentProps } from '../../global/intefaces';
+import { INavigationProps } from '../../global/intefaces';
 import clsx from "clsx";
 import { createStyles, makeStyles, useTheme, Theme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Navigation = ( { children } : IComponentProps) => {
+const Navigation = ( { routes, children } : INavigationProps) => {
 
     const classes = useStyles();
     const theme = useTheme();
@@ -112,7 +112,7 @@ const Navigation = ( { children } : IComponentProps) => {
     const handleDrawerClose = () => {
       setOpen(false);
     };
-  
+
     return (
       <div className={classes.root}>
         <CssBaseline />
@@ -164,23 +164,27 @@ const Navigation = ( { children } : IComponentProps) => {
           <Divider />
           <List>
             {sectionTop.map((NavLink) => (
-              <ListItem button key={NavLink.name}>
-                <ListItemIcon>
-                  <Link to={NavLink.link} className={classes.link}>{NavLink.icon}</Link>
-                </ListItemIcon>
-                <ListItemText primary={NavLink.name} />
-              </ListItem>
+              <Link to={NavLink.link} className={classes.link}>
+                <ListItem button key={NavLink.name}>
+                  <ListItemIcon>
+                    {NavLink.icon}
+                  </ListItemIcon>
+                  <ListItemText primary={NavLink.name} />
+                </ListItem>
+              </Link>
             ))}
           </List>
           <Divider />
           <List>
             {sectionMid.map((NavLink) => (
-              <ListItem button key={NavLink.name}>
-                <ListItemIcon>
-                  <Link to={NavLink.link} className={classes.link}>{NavLink.icon}</Link>
-                </ListItemIcon>
-                <ListItemText primary={NavLink.name} />
-              </ListItem>
+               <Link to={NavLink.link} className={classes.link}>
+                <ListItem button key={NavLink.name}>
+                  <ListItemIcon>
+                  {NavLink.icon}
+                  </ListItemIcon>
+                  <ListItemText primary={NavLink.name} />
+                </ListItem>
+              </Link>
             ))}
           </List>
         </Drawer>
@@ -192,4 +196,3 @@ const Navigation = ( { children } : IComponentProps) => {
   }
   
   export default Navigation;
-  

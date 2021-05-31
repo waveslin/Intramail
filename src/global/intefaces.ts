@@ -8,4 +8,4 @@ export interface IRoutesMapping { [key: string] : IRoute }
 
 export interface INavLink { name: string, icon: React.ReactNode, link: string }
 
-export interface INavigationProps { title?: string, children?: React.ReactNode};
+export interface INavigationProps { title?: string, routes?:IRoutesMapping, children?: React.ReactNode};

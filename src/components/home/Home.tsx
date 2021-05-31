@@ -1,7 +1,7 @@
 import Typography from "@material-ui/core/Typography";
 
 
-const Home = () => {
+const Home = (props : Object) => {
     return (
         <>
             <Typography paragraph>

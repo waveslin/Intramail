@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Navigation = ( { routes, children } : INavigationProps) => {
+const Navigation = ( { children } : INavigationProps) => {
 
     const classes = useStyles();
     const theme = useTheme();
